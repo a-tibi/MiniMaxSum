@@ -8,11 +8,11 @@ namespace MiniMaxPlus
 	{
 		public static void miniMaxSum(List<int> arr)
 		{
-			var sum = new List<int>();
+			var sum = new List<Int64>();
 
 			foreach (var item in arr)
 			{
-				sum.Add(arr.Sum() - item);
+				sum.Add(arr.Select(n => Convert.ToInt64(n)).Sum() - item);
 			}
 
 			Console.WriteLine($"Minimum Sum: {sum.Min()} - Maximum Sum: {sum.Max()}");
